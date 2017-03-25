@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="FoodItemsCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="375" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2B-yE-1TR">
+                        <frame key="frameInset" minX="8" minY="14" width="70" height="70"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="價格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8I-7b-VuF">
+                        <frame key="frameInset" minX="86" minY="59" width="85" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-Q7-uYJ">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="wro-wH-Yoz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                        <state key="normal" title="-"/>
+                        <connections>
+                            <action selector="minusBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uSQ-Oq-cdB"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdF-wB-NW2">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="ByE-GZ-rZ3"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-LM-x4l">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="9rK-RC-xGx"/>
+                            <constraint firstAttribute="height" constant="45" id="CL4-GQ-eKn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                        <state key="normal" title="+"/>
+                        <connections>
+                            <action selector="plusBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ldQ-U3-Rvw"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="項目" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB2-Co-cYw">
+                        <frame key="frameInset" minX="86" minY="14" width="85" height="47"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="JdF-wB-NW2" secondAttribute="bottom" constant="25" id="1CT-by-tqE"/>
+                    <constraint firstItem="mgj-Q7-uYJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="3wq-tQ-5vv"/>
+                    <constraint firstItem="dJO-LM-x4l" firstAttribute="leading" secondItem="JdF-wB-NW2" secondAttribute="trailing" constant="10" id="3yW-qs-NY2"/>
+                    <constraint firstItem="dJO-LM-x4l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="AOM-Gl-Fdp"/>
+                    <constraint firstItem="JdF-wB-NW2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="28" id="ICP-qr-Us8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dJO-LM-x4l" secondAttribute="bottom" constant="19" id="Kfe-tH-96Z"/>
+                    <constraint firstItem="JdF-wB-NW2" firstAttribute="leading" secondItem="mgj-Q7-uYJ" secondAttribute="trailing" constant="10" id="Rq1-V2-JCv"/>
+                    <constraint firstItem="dJO-LM-x4l" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hSa-ml-NsM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mgj-Q7-uYJ" secondAttribute="bottom" constant="19" id="uOX-4z-3yA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countTextField" destination="JdF-wB-NW2" id="29E-fA-okG"/>
+                <outlet property="foodImage" destination="I2B-yE-1TR" id="bGp-7t-4Ly"/>
+                <outlet property="foodNameLabel" destination="wB2-Co-cYw" id="EbN-ZP-xu1"/>
+                <outlet property="foodPriceLabel" destination="K8I-7b-VuF" id="WLf-ZA-J0A"/>
+                <outlet property="minusBtn" destination="mgj-Q7-uYJ" id="log-E9-aI9"/>
+                <outlet property="plusBtn" destination="dJO-LM-x4l" id="ewC-sH-IbD"/>
+            </connections>
+            <point key="canvasLocation" x="-5.5" y="-14"/>
+        </tableViewCell>
+    </objects>
+</document>

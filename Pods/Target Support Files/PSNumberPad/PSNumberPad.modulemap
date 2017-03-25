@@ -1,0 +1,6 @@
+framework module PSNumberPad {
+  umbrella header "PSNumberPad-umbrella.h"
+
+  export *
+  module * { export * }
+}
